@@ -1,0 +1,2 @@
+D:\libs\Number\Debug\Number.pdb
+D:\libs\Number\Number\Debug\Number.pdb
