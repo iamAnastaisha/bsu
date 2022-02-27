@@ -1,0 +1,5 @@
+/home/anastasiya/CLionProjects/TestClient/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/anastasiya/CLionProjects/TestClient/cmake-build-debug/CMakeFiles/TestClient.dir
+/home/anastasiya/CLionProjects/TestClient/cmake-build-debug/CMakeFiles/Vector_lib.dir
+/home/anastasiya/CLionProjects/TestClient/cmake-build-debug/CMakeFiles/Number_lib.dir
+/home/anastasiya/CLionProjects/TestClient/cmake-build-debug/CMakeFiles/edit_cache.dir
