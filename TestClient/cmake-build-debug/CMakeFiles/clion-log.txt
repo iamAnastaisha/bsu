@@ -1,0 +1,4 @@
+/home/anastasiya/Downloads/CLion-2021.3.3/clion-2021.3.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/anastasiya/Downloads/CLion-2021.3.3/clion-2021.3.3/bin/ninja/linux/ninja -G Ninja /home/anastasiya/CLionProjects/TestClient
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/anastasiya/CLionProjects/TestClient/cmake-build-debug

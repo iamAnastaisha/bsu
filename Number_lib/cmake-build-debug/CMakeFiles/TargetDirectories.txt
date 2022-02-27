@@ -1,0 +1,3 @@
+/home/anastasiya/CLionProjects/Number_lib/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/anastasiya/CLionProjects/Number_lib/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/anastasiya/CLionProjects/Number_lib/cmake-build-debug/CMakeFiles/Number_lib.dir
