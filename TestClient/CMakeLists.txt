@@ -5,8 +5,11 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(TestClient main.cpp)
 
-add_library(Number_lib STATIC ../Number_lib/library.cpp)
-add_library(Vector_lib SHARED ../Vector_lib/library.cpp)
+include_directories(../Number_lib/library.h)
+include_directories(../Vector_lib/library.h)
 
-target_link_libraries(TestClient PRIVATE Number_lib)
-target_link_libraries(TestClient PRIVATE Vector_lib)
+add_library(Number_lib STATIC ../Number_lib/library.cpp ../Number_lib/cmake-build-debug/libNumber_lib.a)
+add_library(Vector_lib SHARED ../Vector_lib/library.cpp ../Vector_lib/cmake-build-debug/libVector_lib.so)
+
+target_link_libraries(TestClient PUBLIC Number_lib)
+target_link_libraries(TestClient PUBLIC Vector_lib)
