@@ -7,7 +7,7 @@
 LPCSTR kill_path = "D:\\Ћаб рабы\\ќси\\Killer\\Debug\\Killer.exe";
 
 void printProcesses() {
-  std::cout << "///////////////////////////////////\n";
+  std::cout << "\n///////////////////////////////////\n";
   PROCESSENTRY32 pe = {0};
   pe.dwSize = sizeof(PROCESSENTRY32);
   HANDLE hSnap = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
@@ -20,7 +20,7 @@ void printProcesses() {
   } while (Process32Next(hSnap, &pe));
 
   CloseHandle(hSnap);
-  std::cout << "///////////////////////////////////\n";
+  std::cout << "\n///////////////////////////////////\n\n";
 }
 
 void kill(std::string str) {
@@ -36,23 +36,23 @@ void kill(std::string str) {
 
   int main() {
   printProcesses();
+
   SetEnvironmentVariableA("PROC_TO_KILL", "Telegram,firefox,Totalcmd");
   kill("");
   _putenv("PROC_TO_KILL");
-  std::string command;
-  std::cout << "\nYou may:\nprint\nkill\nexit\n\n";
-  std::cin >> command;
-  while (command != "exit") {
-    if (command == "print")
-      printProcesses();
-    else if (command == "kill") {
-      std::string command_str;
-      std::cin >> command_str;
-      kill(command_str);
-    } else
-      std::cout << "!WRONG COMMAND!\n";
-    std::cout << "\nYou may:\nprint\nkill\nexit\n\n";
-    std::cin >> command;
-  }
+  std::cout << "Telegram,firefox,Totalcmd were killed\n\n";
+  printProcesses();
+
+  std::string name_or_id;
+  std::cout << "Enter id of process\n";
+  std::cin >> name_or_id;
+  kill(name_or_id);
+  printProcesses();
+
+  std::cout << "Enter name of process\n";
+  std::cin >> name_or_id;
+  kill(name_or_id);
+  printProcesses();
+
   return 0;
 }
