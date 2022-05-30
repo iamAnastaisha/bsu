@@ -15,8 +15,10 @@ int main() {
         if (!pid){
             if (dup2(p[1], 1) < 0) exit(1);
             system(procs[i].c_str());
+            exit(0);
         }
          if (dup2(p[0], 0) < 0) exit(1);
+        close(p[1]);
     }
     system(procs[3].c_str());
     return 0;
