@@ -2,11 +2,11 @@
 
 int main() {
     int num;
-    std::cin >> num;
-    for (int i = 0; i < 4; i++){
-        std::cout << num * 7 << " ";
+    for (int i = 0; i < 5; i++){
         std::cin >> num;
+        std::cout << num * 7;
+        if (i==4) std::cout << "\n";
+        else std::cout << " ";
     }
-    std::cout << num * 7 << "\n";
     return 0;
 }

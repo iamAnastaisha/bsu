@@ -3,11 +3,11 @@
 
 int main() {
     int num;
-    std::cin >> num;
-    for (int i = 0; i < 4; i++){
-        std::cout << pow(num,3) << " ";
+    for (int i = 0; i < 5; i++){
         std::cin >> num;
+        std::cout << pow(num,3);
+        if (i==4) std::cout << "\n";
+        else std::cout << " ";
     }
-    std::cout << pow(num,3) << "\n";
     return 0;
 }
