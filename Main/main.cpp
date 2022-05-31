@@ -7,7 +7,11 @@ int main() {
                         "../../procM/cmake-build-debug/procM",
                         "../../procS/cmake-build-debug/procS"};
     std::cout << "Enter 5 numbers:\n";
+<<<<<<< HEAD
     int p[3];
+=======
+    int pid, p[3];
+>>>>>>> lab7_lin
     for (int i = 0; i < 3; i++) {
         if (pipe(p) < 0)
             exit(1);
