@@ -1,3 +1,0 @@
-/home/anastasiya/CLionProjects/procA/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/anastasiya/CLionProjects/procA/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/anastasiya/CLionProjects/procA/cmake-build-debug/CMakeFiles/procA.dir
