@@ -4,10 +4,10 @@
 #include <string>
 #define BUFSIZE 4096
 
-LPCSTR procP = "D:\\Ëàá ðàáû\\Îñè\\ProcP\\Debug\\ProcP.exe";
-LPCSTR procM = "D:\\Ëàá ðàáû\\Îñè\\ProcM\\Debug\\ProcM.exe";
-LPCSTR procA = "D:\\Ëàá ðàáû\\Îñè\\ProcA\\Debug\\ProcA.exe";
-LPCSTR procS = "D:\\Ëàá ðàáû\\Îñè\\ProcS\\Debug\\ProcS.exe";
+LPCSTR procP = "D:\\Ã‹Ã Ã¡ Ã°Ã Ã¡Ã»\\ÃŽÃ±Ã¨\\ProcP\\Debug\\ProcP.exe";
+LPCSTR procM = "D:\\Ã‹Ã Ã¡ Ã°Ã Ã¡Ã»\\ÃŽÃ±Ã¨\\ProcM\\Debug\\ProcM.exe";
+LPCSTR procA = "D:\\Ã‹Ã Ã¡ Ã°Ã Ã¡Ã»\\ÃŽÃ±Ã¨\\ProcA\\Debug\\ProcA.exe";
+LPCSTR procS = "D:\\Ã‹Ã Ã¡ Ã°Ã Ã¡Ã»\\ÃŽÃ±Ã¨\\ProcS\\Debug\\ProcS.exe";
 
 HANDLE g_hChildStd_IN_Rd1 = NULL;
 HANDLE g_hChildStd_IN_Wr1 = NULL;
@@ -29,8 +29,7 @@ HANDLE g_hChildStd_IN_Wr4 = NULL;
 HANDLE g_hChildStd_OUT_Rd4 = NULL;
 HANDLE g_hChildStd_OUT_Wr4 = NULL;
 
-HANDLE g_hInputFile = NULL, pipe1 = NULL, pipe2 = NULL, pipe3 = NULL,
-       pipe4 = NULL;
+HANDLE g_hInputFile = NULL;
 
 void CreateChildProcess(LPCSTR, HANDLE, HANDLE);
 void WriteToPipe(HANDLE);
@@ -60,18 +59,6 @@ int main() {
   g_hInputFile =
       CreateFileA("in.txt", GENERIC_READ, FILE_SHARE_READ | FILE_SHARE_WRITE,
                   NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
-  pipe1 = CreateFileA("\\\\.\\pipe\\$Pipe1$", PIPE_ACCESS_INBOUND,
-                      FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, OPEN_EXISTING,
-                      FILE_ATTRIBUTE_NORMAL, NULL);
-  pipe2 = CreateFileA("\\\\.\\pipe\\$Pipe2$", PIPE_ACCESS_INBOUND,
-                      FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, OPEN_EXISTING,
-                      FILE_ATTRIBUTE_NORMAL, NULL);
-  pipe3 = CreateFileA("\\\\.\\pipe\\$Pipe3$", PIPE_ACCESS_INBOUND,
-                      FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, OPEN_EXISTING,
-                      FILE_ATTRIBUTE_NORMAL, NULL);
-  pipe4 = CreateFileA("\\\\.\\pipe\\$Pipe4$", PIPE_ACCESS_INBOUND,
-                      FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, OPEN_EXISTING,
-                      FILE_ATTRIBUTE_NORMAL, NULL);
 
   if (g_hInputFile == INVALID_HANDLE_VALUE) printf("CreateFile");
 
